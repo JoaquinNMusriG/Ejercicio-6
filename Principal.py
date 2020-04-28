@@ -33,14 +33,14 @@ if __name__ == '__main__':
     h=int(input("Ingrese Hora r1: "))
     m=int(input("Ingrese Minutos r1: "))
     s=int(input("Ingrese Segundos r1: "))
-    r1= FechaHora(5,6,2020,17, 30, 0)
+    r1= FechaHora(d,mes,a,h, m, s)
     d=int(input("Ingrese Dia r2: "))
     mes=int(input("Ingrese Mes r2: "))
     a=int(input("Ingrese Año r2: "))
     h=int(input("Ingrese Hora r2: "))
     m=int(input("Ingrese Minutos r2: "))
     s=int(input("Ingrese Segundos r2: "))
-    r2= FechaHora(5,7,2020,3, 30, 25)
+    r2= FechaHora(d,mes,a,h, m, s)
 
     band = False
     while not band:
