@@ -259,11 +259,18 @@ class FechaHora:
         return FechaHora(d,mes,a,h, m, s)
 
     def __gt__ (self, otroFH):
-        if (self.getHora() > otroFH.getHora()):
-            return True
+        if (self.getAnio() > otroFH.getAnio()):
+            resultado = True
+        elif (self.getAnio() == otroFH.getAnio()) & (self.getMes() > otroFH.getMes()):
+            resultado = True
+        elif (self.getMes() == otroFH.getMes()) & (self.getDia() > otroFH.getDia()):
+            resultado = True
+        elif (self.getDia() == otroFH.getDia()) & (self.getHora() > otroFH.getHora()):
+            resultado = True
         elif (self.getHora() == otroFH.getHora()) & (self.getMinuto() > otroFH.getMinuto()):
-            return True
-        elif (self.getHora() == otroFH.getHora()) & (self.getMinuto() == otroFH.getMinuto()) & (self.getSegundo() > otroFH.getSegundo()):
-            return True
+            resultado = True
+        elif (self.getMinuto() == otroFH.getMinuto()) & (self.getSegundo() > otroFH.getSegundo()):
+            resultado = True
         else:
-            return False
+            resultado = False
+        return resultado
